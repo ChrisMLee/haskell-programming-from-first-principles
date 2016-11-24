@@ -1,11 +1,11 @@
 module Cipher where
   import Data.Char
 
-  shiftChar:: Char -> Char
-  shiftChar x =
-    case ((+) 5 $ ord x) > 122 of
-      True -> chr . (+) 97 $ flip mod 122 $ ord x + 5
-      False -> chr . (+) 5 $ ord x
+  shiftChar:: Char -> Int -> Char
+  shiftChar x shift =
+    case ((+) shift $ ord x) > 122 of
+      True -> chr . (+) 96 $ flip mod 122 $ ord x + shift
+      False -> chr . (+) shift $ ord x
 
   -- either mod 122 or 97
 
