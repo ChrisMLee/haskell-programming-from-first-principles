@@ -13,6 +13,7 @@ foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b
 foldr f acc [] = acc
 foldr f acc (x:xs) = f x (foldr f acc xs)
 
+-- Self-calls (tail-call) through the list, only beginning to produce values after it’s reached the end of the list.
 foldl :: Foldable t => (b -> a -> b) -> b -> t a -> b
 foldl f acc [] = acc
 foldl f acc (x:xs) = foldl f (f acc x) xs
