@@ -169,8 +169,8 @@ https://github.com/mikowitz/haskell-from-first-principles/blob/master/chapter11/
 https://github.com/nackjicholson/haskellbook-solutions/blob/master/chapter11/exercises.md 
 
 ### Good Functions:
-(!!) [1,2,3] 0 -> 1
-zip
-zipWith
-intercalate
+(!!) [1,2,3] 0 -> 1  
+zip  
+zipWith  
+intercalate  
 http://hackage.haskell.org/package/base-4.9.0.0/docs/Data-List.html#v:intercalate 
