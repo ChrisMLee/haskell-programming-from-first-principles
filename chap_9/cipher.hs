@@ -1,5 +1,6 @@
 module Cipher where
 import Data.Char
+import System.IO
 
 shiftChar:: Int -> Char -> Char
 shiftChar shift x =
@@ -10,11 +11,22 @@ shiftChar shift x =
 runCipher:: String -> Int -> String
 runCipher xs shift =  map (shiftChar shift) xs
 
+--main :: IO ()
+--main = do
+--    putStr "Input the string you want to encrypt: "
+--    word <- getLine 
+--    putStrLn (show $ runCipher word 1)
+
 main :: IO ()
-main =
-  print $ runCipher "hello" 1
+main = do
+  putStr "input caesar shift: "
+  shift <- getLine
+  putStr "input text: "
+  str <- getLine
+  putStrLn $ "encrypted text: " ++ runCipher str (read shift :: Int)
 
 -- either mod 122 or 97
 
 -- 122 + 5 should equal 5
 -- 97-3 should equal 
+

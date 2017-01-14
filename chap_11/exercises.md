@@ -1,3 +1,5 @@
+# Chapter 11 Exercises
+
 The | represents logical disjunction – that is, "or."
 This is the sum in algebraic datatypes.
 
