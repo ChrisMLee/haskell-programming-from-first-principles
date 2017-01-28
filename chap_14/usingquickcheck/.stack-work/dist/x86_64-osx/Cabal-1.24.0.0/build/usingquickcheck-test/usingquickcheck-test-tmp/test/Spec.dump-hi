@@ -1,0 +1,672 @@
+
+==================== FINAL INTERFACE ====================
+2017-01-21 12:01:07.232908 UTC
+
+interface main@main:Main 8001
+  interface hash: 00b6b7063cb5df9271b023f33efbc5f5
+  ABI hash: 6e57ecb9e27bed6b058ca8673dfa96ee
+  export-list hash: dfda5402bfb4fe3f9e6c48ea2a29c60d
+  orphan hash: 767836e240e2b1e996fa8e7806ecdfd4
+  flag hash: d4d84b989f630eea8322bc1567df3262
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+module dependencies:
+package dependencies: QuickCheck-2.8.2@QuickCheck-2.8.2-B7cXgOk7OAiKrNRsk2SfuA
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-boot-th-8.0.1@ghc-boot-th-8.0.1
+                      ghc-prim-0.5.0.0 integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa
+                      random-1.1@random-1.1-54KmMHXjttlERYcr1mvsAe
+                      template-haskell-2.11.0.0
+                      tf-random-0.5@tf-random-0.5-4z8OJUaXC1FRNfrLPFWAD
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa:Control.Monad.Primitive
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+import  -/  QuickCheck-2.8.2@QuickCheck-2.8.2-B7cXgOk7OAiKrNRsk2SfuA:Test.QuickCheck a3636f7c6b928d0bf1ca94109fdc4fa1
+import  -/  QuickCheck-2.8.2@QuickCheck-2.8.2-B7cXgOk7OAiKrNRsk2SfuA:Test.QuickCheck.Arbitrary 5b51ce2acafcb4623ed4769aedc3c335
+import  -/  QuickCheck-2.8.2@QuickCheck-2.8.2-B7cXgOk7OAiKrNRsk2SfuA:Test.QuickCheck.Function 7e439306095dbc1265d823b33d1c0065
+import  -/  QuickCheck-2.8.2@QuickCheck-2.8.2-B7cXgOk7OAiKrNRsk2SfuA:Test.QuickCheck.Gen 1a24b03576332c61338aaa04a55fe2ef
+import  -/  QuickCheck-2.8.2@QuickCheck-2.8.2-B7cXgOk7OAiKrNRsk2SfuA:Test.QuickCheck.Modifiers 010d072a2d545492671555f175f3146b
+import  -/  QuickCheck-2.8.2@QuickCheck-2.8.2-B7cXgOk7OAiKrNRsk2SfuA:Test.QuickCheck.Property 501126dbed783f474a138ddfa9e00954
+import  -/  QuickCheck-2.8.2@QuickCheck-2.8.2-B7cXgOk7OAiKrNRsk2SfuA:Test.QuickCheck.Test 2aa45aab7793fd5d8554a9e5287b055d
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.List 49b86831b79b49ce5d4d9416ecba61df
+import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
+import  -/  base-4.9.0.0:Data.Tuple acb0ed10307ed88df6c81b8589f4de16
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Real 08bf4acb5f2508f89d6fbcd57fe232e9
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:Text.Read 9c1be14f7e5eac8b18bcb566c5763677
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+e1e4e2cb331a0fbee6ec1cc474a00934
+  $s$fArbitraryFun ::
+    Test.QuickCheck.Arbitrary.Arbitrary
+      (Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int)
+                  (Test.QuickCheck.Function.$fArbitraryFun_$carbitrary
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     Test.QuickCheck.Function.$fFunctionInt_$cfunction
+                       `cast`
+                     (Sym (Test.QuickCheck.Function.N:Function[0] <GHC.Types.Int>_N))
+                     Test.QuickCheck.Arbitrary.$fCoArbitraryInt_$ccoarbitrary
+                       `cast`
+                     (Sym (Test.QuickCheck.Arbitrary.N:CoArbitrary[0]
+                               <GHC.Types.Int>_N))
+                     Test.QuickCheck.Arbitrary.$fArbitraryInt)
+                  (Test.QuickCheck.Function.$fArbitraryFun_$cshrink
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     Test.QuickCheck.Function.$fFunctionInt_$cfunction
+                       `cast`
+                     (Sym (Test.QuickCheck.Function.N:Function[0] <GHC.Types.Int>_N))
+                     Test.QuickCheck.Arbitrary.$fCoArbitraryInt_$ccoarbitrary
+                       `cast`
+                     (Sym (Test.QuickCheck.Arbitrary.N:CoArbitrary[0]
+                               <GHC.Types.Int>_N))
+                     Test.QuickCheck.Arbitrary.$fArbitraryInt) -}
+a2b2db1bc66071172cf5931916c6c2d6
+  $s$fArbitrary[] ::
+    Test.QuickCheck.Arbitrary.Arbitrary [GHC.Types.Int]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ [GHC.Types.Int]
+                  (Test.QuickCheck.Arbitrary.$fArbitrary[]_$carbitrary
+                     @ GHC.Types.Int
+                     Test.QuickCheck.Arbitrary.$fArbitraryInt)
+                  Main.$s$fArbitrary[]_$s$fArbitrary[]_$cshrink -}
+22d5bf596ea378939095b94d9fedd056
+  $s$fArbitrary[]1 ::
+    Test.QuickCheck.Arbitrary.Arbitrary [[GHC.Types.Int]]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ [[GHC.Types.Int]]
+                  (Test.QuickCheck.Arbitrary.$fArbitrary[]_$carbitrary
+                     @ [GHC.Types.Int]
+                     Main.$s$fArbitrary[]2)
+                  Main.$s$fArbitrary[]_$s$fArbitrary[]_$cshrink1 -}
+d1e1e7fb64c0bef57be1363172baa06a
+  $s$fArbitrary[]2 ::
+    Test.QuickCheck.Arbitrary.Arbitrary [GHC.Types.Int]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Main.$s$fArbitrary[] -}
+a16a6832435de3ae0c17590013c6f29d
+  $s$fArbitrary[]_$s$fArbitrary[]_$cshrink ::
+    [GHC.Types.Int] -> [[GHC.Types.Int]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (xs :: [GHC.Types.Int]) ->
+                 Test.QuickCheck.Arbitrary.shrinkList
+                   @ GHC.Types.Int
+                   Test.QuickCheck.Arbitrary.$fArbitraryInt_$cshrink
+                   xs) -}
+85a8158c31f6eb8104e3b3ae08e84704
+  $s$fArbitrary[]_$s$fArbitrary[]_$cshrink1 ::
+    [[GHC.Types.Int]] -> [[[GHC.Types.Int]]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (xs :: [[GHC.Types.Int]]) ->
+                 Test.QuickCheck.Arbitrary.shrinkList
+                   @ [GHC.Types.Int]
+                   Main.$s$fArbitrary[]_$s$fArbitrary[]_$cshrink
+                   xs) -}
+bc0910355a47b7cccad3213c3f1ef1b0
+  $s$fShowFun ::
+    GHC.Show.Show
+      (Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int)
+                  Main.$s$fShowFun_$s$fShowFun_$cshowsPrec
+                  Main.$s$fShowFun_$s$fShowFun_$cshow
+                  (Test.QuickCheck.Function.$fShowFun_$cshowList
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Show.$fShowInt
+                     GHC.Show.$fShowInt) -}
+aa9480f063c919f0f96739cb07ec4e52
+  $s$fShowFun_$s$fShowFun_$cshow ::
+    Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int
+    -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(SL),1*U(1*U(1*U,U),A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Test.QuickCheck.Function.Fun
+                            GHC.Types.Int GHC.Types.Int) ->
+                 case ds of wild { Test.QuickCheck.Function.Fun ds4 ds5 ->
+                 case ds4 of wild1 { (,) p d ->
+                 Test.QuickCheck.Function.showFunction
+                   @ GHC.Types.Int
+                   @ GHC.Types.Int
+                   GHC.Show.$fShowInt
+                   GHC.Show.$fShowInt
+                   p
+                   (GHC.Base.Just @ GHC.Types.Int d) } }) -}
+0461712fc7c0d93f9a40f5376d51c8f7
+  $s$fShowFun_$s$fShowFun_$cshowsPrec ::
+    GHC.Types.Int
+    -> Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int
+    -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S(SL),1*U(1*U(1*U,U),A)><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int)
+                   (s :: GHC.Base.String) ->
+                 case x of wild { Test.QuickCheck.Function.Fun ds4 ds5 ->
+                 case ds4 of wild1 { (,) p d ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b1
+                      (c :: GHC.Types.Char -> b1 -> b1)[OneShot]
+                      (n :: b1)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b1
+                      c
+                      n
+                      (Test.QuickCheck.Function.showFunction
+                         @ GHC.Types.Int
+                         @ GHC.Types.Int
+                         GHC.Show.$fShowInt
+                         GHC.Show.$fShowInt
+                         p
+                         (GHC.Base.Just @ GHC.Types.Int d)))
+                   s } }) -}
+2427af21d42211e55bdda95e69867d2b
+  $s$fShow[] :: GHC.Show.Show [[GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ [[GHC.Types.Int]]
+                  Main.$s$fShow[]3
+                  Main.$s$fShow[]2
+                  Main.$s$fShow[]1 -}
+faa97c61750979766c47a7d2aab81182
+  $s$fShow[]1 :: [[[GHC.Types.Int]]] -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (eta :: [[[GHC.Types.Int]]]) (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ [[GHC.Types.Int]]
+                   GHC.Show.$fShow[]_$s$cshowList
+                   eta
+                   eta1) -}
+86c0231e4bd0083f9a476164f1ee6b78
+  $s$fShow[]2 :: [[GHC.Types.Int]] -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: [[GHC.Types.Int]]) ->
+                 GHC.Show.showList__
+                   @ [GHC.Types.Int]
+                   GHC.Show.shows_$cshowList1
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+aec8d4b80020b59fff82b8e697b49665
+  $s$fShow[]3 :: GHC.Types.Int -> [[GHC.Types.Int]] -> GHC.Show.ShowS
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: GHC.Types.Int)
+                   (eta :: [[GHC.Types.Int]])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.$fShow[]_$s$cshowList eta eta1) -}
+665ebffe35f5b6e180ea7884fef1b203
+  $s$fTestable(->) ::
+    Test.QuickCheck.Property.Testable
+      (GHC.Types.Float -> GHC.Types.Bool)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Float -> GHC.Types.Bool)
+                  (Test.QuickCheck.Property.$fTestable(->)_$cproperty
+                     @ GHC.Types.Float
+                     @ GHC.Types.Bool
+                     Test.QuickCheck.Arbitrary.$fArbitraryFloat
+                     GHC.Float.$fShowFloat
+                     Test.QuickCheck.Property.$fTestableBool)
+                  Main.$s$fTestable(->)_$s$fTestable(->)_$cexhaustive -}
+894f73c315449c2e58a4d59f6136eb59
+  $s$fTestable(->)1 ::
+    Test.QuickCheck.Property.Testable (GHC.Types.Int -> GHC.Types.Bool)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int -> GHC.Types.Bool)
+                  (Test.QuickCheck.Property.$fTestable(->)_$cproperty
+                     @ GHC.Types.Int
+                     @ GHC.Types.Bool
+                     Test.QuickCheck.Arbitrary.$fArbitraryInt
+                     GHC.Show.$fShowInt
+                     Test.QuickCheck.Property.$fTestableBool)
+                  Main.$s$fTestable(->)_$s$fTestable(->)_$cexhaustive1 -}
+b11c0743c86b9cf4123f4b78bd4ad23f
+  $s$fTestable(->)10 ::
+    ([GHC.Types.Int] -> GHC.Types.Bool) -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: [GHC.Types.Int] -> GHC.Types.Bool) -> GHC.Types.False) -}
+b62c5f534d035beb025d9ad19f168e16
+  $s$fTestable(->)11 :: GHC.Show.Show [GHC.Types.Int]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Show.$fShow[]_$s$fShow[] -}
+8c0af5e16ecb9fb2dc73045a335a73b3
+  $s$fTestable(->)12 ::
+    Test.QuickCheck.Property.Testable
+      (GHC.Types.Int -> [GHC.Types.Int] -> GHC.Types.Bool)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int -> [GHC.Types.Int] -> GHC.Types.Bool)
+                  (Test.QuickCheck.Property.$fTestable(->)_$cproperty
+                     @ GHC.Types.Int
+                     @ ([GHC.Types.Int] -> GHC.Types.Bool)
+                     Test.QuickCheck.Arbitrary.$fArbitraryInt
+                     GHC.Show.$fShowInt
+                     Main.$s$fTestable(->)14)
+                  Main.$s$fTestable(->)13 -}
+aa595b54478c874218fd43292c91725f
+  $s$fTestable(->)13 ::
+    (GHC.Types.Int -> [GHC.Types.Int] -> GHC.Types.Bool)
+    -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: GHC.Types.Int -> [GHC.Types.Int] -> GHC.Types.Bool) ->
+                 GHC.Types.False) -}
+d3dc73a962128335c0ce5c6e3aa014aa
+  $s$fTestable(->)14 ::
+    Test.QuickCheck.Property.Testable
+      ([GHC.Types.Int] -> GHC.Types.Bool)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Main.$s$fTestable(->)9 -}
+a558bb3c8d29dc1280edf47e8a4523b7
+  $s$fTestable(->)15 ::
+    Test.QuickCheck.Property.Testable
+      ([GHC.Types.Int] -> [GHC.Types.Int] -> GHC.Types.Bool)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ([GHC.Types.Int] -> [GHC.Types.Int] -> GHC.Types.Bool)
+                  (Test.QuickCheck.Property.$fTestable(->)_$cproperty
+                     @ [GHC.Types.Int]
+                     @ ([GHC.Types.Int] -> GHC.Types.Bool)
+                     Main.$s$fArbitrary[]2
+                     Main.$s$fTestable(->)11
+                     Main.$s$fTestable(->)14)
+                  Main.$s$fTestable(->)16 -}
+6d3b0d0529b5068406c9d79b9c92444b
+  $s$fTestable(->)16 ::
+    ([GHC.Types.Int] -> [GHC.Types.Int] -> GHC.Types.Bool)
+    -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: [GHC.Types.Int] -> [GHC.Types.Int] -> GHC.Types.Bool) ->
+                 GHC.Types.False) -}
+a92e678bd3a34bcd405eded16781627e
+  $s$fTestable(->)17 ::
+    Test.QuickCheck.Property.Testable
+      ([[GHC.Types.Int]] -> GHC.Types.Bool)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ([[GHC.Types.Int]] -> GHC.Types.Bool)
+                  (Test.QuickCheck.Property.$fTestable(->)_$cproperty
+                     @ [[GHC.Types.Int]]
+                     @ GHC.Types.Bool
+                     Main.$s$fTestable(->)20
+                     Main.$s$fTestable(->)19
+                     Test.QuickCheck.Property.$fTestableBool)
+                  Main.$s$fTestable(->)18 -}
+b94f7b6988f040f24eb2e94133cf075e
+  $s$fTestable(->)18 ::
+    ([[GHC.Types.Int]] -> GHC.Types.Bool) -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: [[GHC.Types.Int]] -> GHC.Types.Bool) ->
+                 GHC.Types.False) -}
+f2e0ba966af623bd6c0e8ce5036a5afd
+  $s$fTestable(->)19 :: GHC.Show.Show [[GHC.Types.Int]]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Main.$s$fShow[] -}
+62894d6479e775e4ff5f9a00b2cdab16
+  $s$fTestable(->)2 ::
+    Test.QuickCheck.Property.Testable
+      (GHC.Types.Int -> GHC.Types.Int -> GHC.Types.Bool)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int -> GHC.Types.Int -> GHC.Types.Bool)
+                  (Test.QuickCheck.Property.$fTestable(->)_$cproperty
+                     @ GHC.Types.Int
+                     @ (GHC.Types.Int -> GHC.Types.Bool)
+                     Test.QuickCheck.Arbitrary.$fArbitraryInt
+                     GHC.Show.$fShowInt
+                     Main.$s$fTestable(->)4)
+                  Main.$s$fTestable(->)3 -}
+d5d1ae99bdcc850214a073741e08af94
+  $s$fTestable(->)20 ::
+    Test.QuickCheck.Arbitrary.Arbitrary [[GHC.Types.Int]]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Main.$s$fArbitrary[]1 -}
+1f066cd46b7bdb70d936b7a8eb21ce41
+  $s$fTestable(->)3 ::
+    (GHC.Types.Int -> GHC.Types.Int -> GHC.Types.Bool)
+    -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: GHC.Types.Int -> GHC.Types.Int -> GHC.Types.Bool) ->
+                 GHC.Types.False) -}
+7a144e5f0dbf4169912541d9e09eeefa
+  $s$fTestable(->)4 ::
+    Test.QuickCheck.Property.Testable (GHC.Types.Int -> GHC.Types.Bool)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Main.$s$fTestable(->)1 -}
+3fc5de0e13c5fe87990107aa064b8b27
+  $s$fTestable(->)5 ::
+    Test.QuickCheck.Property.Testable
+      (Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int
+       -> GHC.Types.Int -> GHC.Types.Bool)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int
+                     -> GHC.Types.Int -> GHC.Types.Bool)
+                  (Test.QuickCheck.Property.$fTestable(->)_$cproperty
+                     @ (Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int)
+                     @ (GHC.Types.Int -> GHC.Types.Bool)
+                     Main.$s$fTestable(->)8
+                     Main.$s$fTestable(->)7
+                     Main.$s$fTestable(->)4)
+                  Main.$s$fTestable(->)6 -}
+19b84cf03eebe546059acde698bca9f3
+  $s$fTestable(->)6 ::
+    (Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int
+     -> GHC.Types.Int -> GHC.Types.Bool)
+    -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int
+                          -> GHC.Types.Int -> GHC.Types.Bool) ->
+                 GHC.Types.False) -}
+e77326bc95f597031181e0fdc7bd322a
+  $s$fTestable(->)7 ::
+    GHC.Show.Show
+      (Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Main.$s$fShowFun -}
+4e889871484016ffec44fed830bea3df
+  $s$fTestable(->)8 ::
+    Test.QuickCheck.Arbitrary.Arbitrary
+      (Test.QuickCheck.Function.Fun GHC.Types.Int GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Main.$s$fArbitraryFun -}
+7abac817caa31460c3a54b89668f3338
+  $s$fTestable(->)9 ::
+    Test.QuickCheck.Property.Testable
+      ([GHC.Types.Int] -> GHC.Types.Bool)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ([GHC.Types.Int] -> GHC.Types.Bool)
+                  (Test.QuickCheck.Property.$fTestable(->)_$cproperty
+                     @ [GHC.Types.Int]
+                     @ GHC.Types.Bool
+                     Main.$s$fArbitrary[]2
+                     Main.$s$fTestable(->)11
+                     Test.QuickCheck.Property.$fTestableBool)
+                  Main.$s$fTestable(->)10 -}
+8a302124e9fcee628b0d18e662fbcd06
+  $s$fTestable(->)_$s$fTestable(->)_$cexhaustive ::
+    (GHC.Types.Float -> GHC.Types.Bool) -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: GHC.Types.Float -> GHC.Types.Bool) -> GHC.Types.False) -}
+908e74e144bfae8a7da4492de3cde08d
+  $s$fTestable(->)_$s$fTestable(->)_$cexhaustive1 ::
+    (GHC.Types.Int -> GHC.Types.Bool) -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: GHC.Types.Int -> GHC.Types.Bool) -> GHC.Types.False) -}
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+d9c0dee8a685c5ed422401aaa63f23bf
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+01d62c2c484918d4b5d94b688c90c90e
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U> -}
+b08d228f4059532a99441778635cdde9
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+"SPEC/Main $fArbitraryFun @ Int @ Int" [ALWAYS] forall ($dFunction :: Test.QuickCheck.Function.Function
+                                                                        GHC.Types.Int)
+                                                       ($dCoArbitrary :: Test.QuickCheck.Arbitrary.CoArbitrary
+                                                                           GHC.Types.Int)
+                                                       ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                         GHC.Types.Int)
+  Test.QuickCheck.Function.$fArbitraryFun @ GHC.Types.Int
+                                          @ GHC.Types.Int
+                                          $dFunction
+                                          $dCoArbitrary
+                                          $dArbitrary
+  = Main.$s$fArbitraryFun
+"SPEC/Main $fArbitrary[] @ Int" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                  GHC.Types.Int)
+  Test.QuickCheck.Arbitrary.$fArbitrary[] @ GHC.Types.Int $dArbitrary
+  = Main.$s$fArbitrary[]
+"SPEC/Main $fArbitrary[] @ [Int]" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                    [GHC.Types.Int])
+  Test.QuickCheck.Arbitrary.$fArbitrary[] @ [GHC.Types.Int]
+                                          $dArbitrary
+  = Main.$s$fArbitrary[]1
+"SPEC/Main $fArbitrary[]_$cshrink @ Int" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                           GHC.Types.Int)
+  Test.QuickCheck.Arbitrary.$fArbitrary[]_$cshrink @ GHC.Types.Int
+                                                   $dArbitrary
+  = Main.$s$fArbitrary[]_$s$fArbitrary[]_$cshrink
+"SPEC/Main $fArbitrary[]_$cshrink @ [Int]" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                             [GHC.Types.Int])
+  Test.QuickCheck.Arbitrary.$fArbitrary[]_$cshrink @ [GHC.Types.Int]
+                                                   $dArbitrary
+  = Main.$s$fArbitrary[]_$s$fArbitrary[]_$cshrink1
+"SPEC/Main $fShowFun @ Int @ Int" [ALWAYS] forall ($dShow :: GHC.Show.Show
+                                                               GHC.Types.Int)
+                                                  ($dShow1 :: GHC.Show.Show GHC.Types.Int)
+  Test.QuickCheck.Function.$fShowFun @ GHC.Types.Int
+                                     @ GHC.Types.Int
+                                     $dShow
+                                     $dShow1
+  = Main.$s$fShowFun
+"SPEC/Main $fShowFun_$cshow @ Int @ Int" [ALWAYS] forall ($dShow :: GHC.Show.Show
+                                                                      GHC.Types.Int)
+                                                         ($dShow1 :: GHC.Show.Show GHC.Types.Int)
+  Test.QuickCheck.Function.$fShowFun_$cshow @ GHC.Types.Int
+                                            @ GHC.Types.Int
+                                            $dShow
+                                            $dShow1
+  = Main.$s$fShowFun_$s$fShowFun_$cshow
+"SPEC/Main $fShowFun_$cshowsPrec @ Int @ Int" [ALWAYS] forall ($dShow :: GHC.Show.Show
+                                                                           GHC.Types.Int)
+                                                              ($dShow1 :: GHC.Show.Show
+                                                                            GHC.Types.Int)
+  Test.QuickCheck.Function.$fShowFun_$cshowsPrec @ GHC.Types.Int
+                                                 @ GHC.Types.Int
+                                                 $dShow
+                                                 $dShow1
+  = Main.$s$fShowFun_$s$fShowFun_$cshowsPrec
+"SPEC/Main $fShow[] @ [Int]" [ALWAYS] forall ($dShow :: GHC.Show.Show
+                                                          [GHC.Types.Int])
+  GHC.Show.$fShow[] @ [GHC.Types.Int] $dShow = Main.$s$fShow[]
+"SPEC/Main $fTestable(->) @ (Fun Int Int) @ (Int -> Bool)" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                                             (Test.QuickCheck.Function.Fun
+                                                                                                GHC.Types.Int
+                                                                                                GHC.Types.Int))
+                                                                           ($dShow :: GHC.Show.Show
+                                                                                        (Test.QuickCheck.Function.Fun
+                                                                                           GHC.Types.Int
+                                                                                           GHC.Types.Int))
+                                                                           ($dTestable :: Test.QuickCheck.Property.Testable
+                                                                                            (GHC.Types.Int
+                                                                                             -> GHC.Types.Bool))
+  Test.QuickCheck.Property.$fTestable(->) @ (Test.QuickCheck.Function.Fun
+                                               GHC.Types.Int GHC.Types.Int)
+                                          @ (GHC.Types.Int -> GHC.Types.Bool)
+                                          $dArbitrary
+                                          $dShow
+                                          $dTestable
+  = Main.$s$fTestable(->)5
+"SPEC/Main $fTestable(->) @ Float @ Bool" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                            GHC.Types.Float)
+                                                          ($dShow :: GHC.Show.Show GHC.Types.Float)
+                                                          ($dTestable :: Test.QuickCheck.Property.Testable
+                                                                           GHC.Types.Bool)
+  Test.QuickCheck.Property.$fTestable(->) @ GHC.Types.Float
+                                          @ GHC.Types.Bool
+                                          $dArbitrary
+                                          $dShow
+                                          $dTestable
+  = Main.$s$fTestable(->)
+"SPEC/Main $fTestable(->) @ Int @ (Int -> Bool)" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                                   GHC.Types.Int)
+                                                                 ($dShow :: GHC.Show.Show
+                                                                              GHC.Types.Int)
+                                                                 ($dTestable :: Test.QuickCheck.Property.Testable
+                                                                                  (GHC.Types.Int
+                                                                                   -> GHC.Types.Bool))
+  Test.QuickCheck.Property.$fTestable(->) @ GHC.Types.Int
+                                          @ (GHC.Types.Int -> GHC.Types.Bool)
+                                          $dArbitrary
+                                          $dShow
+                                          $dTestable
+  = Main.$s$fTestable(->)2
+"SPEC/Main $fTestable(->) @ Int @ ([Int] -> Bool)" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                                     GHC.Types.Int)
+                                                                   ($dShow :: GHC.Show.Show
+                                                                                GHC.Types.Int)
+                                                                   ($dTestable :: Test.QuickCheck.Property.Testable
+                                                                                    ([GHC.Types.Int]
+                                                                                     -> GHC.Types.Bool))
+  Test.QuickCheck.Property.$fTestable(->) @ GHC.Types.Int
+                                          @ ([GHC.Types.Int] -> GHC.Types.Bool)
+                                          $dArbitrary
+                                          $dShow
+                                          $dTestable
+  = Main.$s$fTestable(->)12
+"SPEC/Main $fTestable(->) @ Int @ Bool" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                          GHC.Types.Int)
+                                                        ($dShow :: GHC.Show.Show GHC.Types.Int)
+                                                        ($dTestable :: Test.QuickCheck.Property.Testable
+                                                                         GHC.Types.Bool)
+  Test.QuickCheck.Property.$fTestable(->) @ GHC.Types.Int
+                                          @ GHC.Types.Bool
+                                          $dArbitrary
+                                          $dShow
+                                          $dTestable
+  = Main.$s$fTestable(->)1
+"SPEC/Main $fTestable(->) @ [Int] @ ([Int] -> Bool)" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                                       [GHC.Types.Int])
+                                                                     ($dShow :: GHC.Show.Show
+                                                                                  [GHC.Types.Int])
+                                                                     ($dTestable :: Test.QuickCheck.Property.Testable
+                                                                                      ([GHC.Types.Int]
+                                                                                       -> GHC.Types.Bool))
+  Test.QuickCheck.Property.$fTestable(->) @ [GHC.Types.Int]
+                                          @ ([GHC.Types.Int] -> GHC.Types.Bool)
+                                          $dArbitrary
+                                          $dShow
+                                          $dTestable
+  = Main.$s$fTestable(->)15
+"SPEC/Main $fTestable(->) @ [Int] @ Bool" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                            [GHC.Types.Int])
+                                                          ($dShow :: GHC.Show.Show [GHC.Types.Int])
+                                                          ($dTestable :: Test.QuickCheck.Property.Testable
+                                                                           GHC.Types.Bool)
+  Test.QuickCheck.Property.$fTestable(->) @ [GHC.Types.Int]
+                                          @ GHC.Types.Bool
+                                          $dArbitrary
+                                          $dShow
+                                          $dTestable
+  = Main.$s$fTestable(->)9
+"SPEC/Main $fTestable(->) @ [[Int]] @ Bool" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                              [[GHC.Types.Int]])
+                                                            ($dShow :: GHC.Show.Show
+                                                                         [[GHC.Types.Int]])
+                                                            ($dTestable :: Test.QuickCheck.Property.Testable
+                                                                             GHC.Types.Bool)
+  Test.QuickCheck.Property.$fTestable(->) @ [[GHC.Types.Int]]
+                                          @ GHC.Types.Bool
+                                          $dArbitrary
+                                          $dShow
+                                          $dTestable
+  = Main.$s$fTestable(->)17
+"SPEC/Main $fTestable(->)_$cexhaustive @ Float @ Bool" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                                         GHC.Types.Float)
+                                                                       ($dShow :: GHC.Show.Show
+                                                                                    GHC.Types.Float)
+                                                                       ($dTestable :: Test.QuickCheck.Property.Testable
+                                                                                        GHC.Types.Bool)
+  Test.QuickCheck.Property.$fTestable(->)_$cexhaustive @ GHC.Types.Float
+                                                       @ GHC.Types.Bool
+                                                       $dArbitrary
+                                                       $dShow
+                                                       $dTestable
+  = Main.$s$fTestable(->)_$s$fTestable(->)_$cexhaustive
+"SPEC/Main $fTestable(->)_$cexhaustive @ Int @ Bool" [ALWAYS] forall ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                                       GHC.Types.Int)
+                                                                     ($dShow :: GHC.Show.Show
+                                                                                  GHC.Types.Int)
+                                                                     ($dTestable :: Test.QuickCheck.Property.Testable
+                                                                                      GHC.Types.Bool)
+  Test.QuickCheck.Property.$fTestable(->)_$cexhaustive @ GHC.Types.Int
+                                                       @ GHC.Types.Bool
+                                                       $dArbitrary
+                                                       $dShow
+                                                       $dTestable
+  = Main.$s$fTestable(->)_$s$fTestable(->)_$cexhaustive1
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

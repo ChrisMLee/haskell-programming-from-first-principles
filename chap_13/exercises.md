@@ -1,8 +1,10 @@
 ### Chapter 13
 We use `do` inside functions that return IO in order to sequence side effects in a convenient syntax.
 
+Create new project: `stack new hangman simple`
+
 ### Chapter Exercises
-**Modifying your code**
+**Modifying your code**  
 1. Ciphers: Open your Ciphers module and modify it so that the Caesar and Vigenère ciphers work with user input.
 
 ```

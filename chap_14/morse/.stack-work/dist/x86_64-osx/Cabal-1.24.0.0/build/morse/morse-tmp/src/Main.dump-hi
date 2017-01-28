@@ -1,0 +1,145 @@
+
+==================== FINAL INTERFACE ====================
+2017-01-15 12:42:23.45152 UTC
+
+interface main@main:Main 8001
+  interface hash: 2ba7b09c588301dc4497c45e47c881d7
+  ABI hash: 41f3fb0cecabe921bdce14615d61ff40
+  export-list hash: 367b9d7bd508738653fd26598355dfc3
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 30c21d746951e99e6de3f63fb32c86ee
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.convertFromMorse
+  Main.convertToMorse
+  Main.main
+module dependencies: Morse
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0*
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+import  -/  base-4.9.0.0:Control.Monad 7767aebfd53f0b584cef2fe66ad3986c
+import  -/  base-4.9.0.0:Data.List 49b86831b79b49ce5d4d9416ecba61df
+import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
+import  -/  base-4.9.0.0:Data.Traversable 7ce5b7ee67475ac3d03ae825b86efd9f
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.IO.Handle a1938753d58593f0a419f85b67aa7cd3
+import  -/  base-4.9.0.0:GHC.IO.Handle.FD 13b7a4e1f414dd38346bde554423bf4b
+import  -/  base-4.9.0.0:GHC.IO.Handle.Text 23b6dc4ed000f42bf105ce56bdeb0dc6
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.Environment ee0914a962f5508d0fd404c89ee4999b
+import  -/  base-4.9.0.0:System.Exit 4df7be78e54bbe200276120bd44e7e2a
+import  -/  base-4.9.0.0:System.IO ad985d7a3fc986e9b9c610fb344d9106
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  Morse 3576e359155b620086c2c6e2c4cafcba
+  exports: 56948b054e207a6b6eff746fbc651a68
+  morseToChar fcf08d79378551cf85156f157bda5e2e
+  stringToMorse cc1fefc6a1820c033f45ca346ff167ad
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+a1e8bbbf618f368db98a19ea0dbb2c65
+  convertFromMorse :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.convertFromMorse1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+a78932ee5714cd7f4780df0f0a87d481
+  convertFromMorse1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U> -}
+ba63606205ffd049dc350da2f3a32e15
+  convertToMorse :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.convertToMorse1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+e64f6563ec288b9f8808229f2bc067b4
+  convertToMorse1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U> -}
+2983215a7973fcea51684ef1adcba50a
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+d7b555157f357135b0ad7186c5ff5a6b
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case System.Environment.getArgs1 s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild {
+                   [] -> Main.main4 @ () ipv
+                   : arg ds
+                   -> case ds of wild1 {
+                        []
+                        -> case GHC.Base.eqString arg Main.main3 of wild2 {
+                             GHC.Types.False
+                             -> case GHC.Base.eqString arg Main.main2 of wild3 {
+                                  GHC.Types.False -> Main.main4 @ () ipv
+                                  GHC.Types.True -> Main.convertToMorse1 ipv }
+                             GHC.Types.True -> Main.convertFromMorse1 ipv }
+                        : ipv2 ipv3 -> Main.main4 @ () ipv } } }) -}
+fd434b5b8cdd60c63d3b157f285bcb25
+  main2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "to"#) -}
+8f591e731d2c649a8053373110f038c6
+  main3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "from"#) -}
+e02e91cb6694f339c75e0b093c495580
+  main4 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, b #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ @ b
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main5
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 System.Exit.die2 @ b ipv }) -}
+cfb369a7fbb32ff958091f63957d7fc5
+  main5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Please specify the first argument as being 'from' or 'to' morse, such as: morse to"#) -}
+86d58fa1de1f1250b4bd1c03623d578e
+  main6 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
