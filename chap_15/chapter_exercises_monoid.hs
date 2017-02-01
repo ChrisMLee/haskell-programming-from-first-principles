@@ -154,8 +154,15 @@ h = Comp $ \ (Sum x) -> (Sum x + 1)
 newtype Mem s a =
   Mem { runMem :: s -> (a,s)}
 
+--instance (Semigroup a) => Semigroup (Mem s a) where
+--  (Mem f) <> (Mem g) = Mem (\n -> (\(s, a) -> ((fst (f $ a) <> s), snd (f $ a)) ) $ g(n))
+
 instance (Semigroup a) => Semigroup (Mem s a) where
-  (Mem f) <> (Mem g) = Mem (\n -> (\(s, a) -> ((fst (f $ a) <> s), snd (f $ a)) ) $ g(n))
+  (Mem f) <> (Mem g) = Mem $ \n -> let 
+                        (a, b) = g(n)
+                        (c, d) = f(b)
+                       in (a <> c, d) 
+                              
 
 instance (Monoid a, Semigroup a) => Monoid (Mem s a) where
   mempty = Mem (\s -> (mempty,s))
