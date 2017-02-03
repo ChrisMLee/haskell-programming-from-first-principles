@@ -24,7 +24,9 @@ main = do
   quickCheck (functorCompose' :: K'FC)
   quickCheck $ \x -> functorIdentity (x :: (K' Int Int))
   quickCheck (functorCompose' :: KFC)
-  quickCheck $ \x -> functorIdentity (x :: (K Int Int))
+  quickCheck $ \x -> functorIdentity (x :: (Flip K Int Int))
+  quickCheck (functorCompose' :: EvilGoateeConstFC)
+  quickCheck $ \x -> functorIdentity (x :: (EvilGoateeConst Int Int))
 
 --1. 
 
@@ -73,27 +75,51 @@ newtype Flip f a b =
   deriving (Eq, Show)
 
 newtype K a b =
-  K a
+  K a  deriving (Eq, Show)
 -- should remind you of an
 -- instance you've written before
 instance Functor (Flip K a) where
   fmap f (Flip (K a)) = Flip $ K (f a)
 
-instance (Arbitrary a) => Arbitrary (K a b) where
+instance (Arbitrary b) => Arbitrary (Flip K a b) where
   arbitrary = do
     a <- arbitrary
-    return (K a)
+    return (Flip (K a))
 
 
-type KFC = (K Int Int) -> IntToInt -> IntToInt -> Bool
+type KFC = (Flip K Int Int) -> IntToInt -> IntToInt -> Bool
 
 -- p. 661
 
+--4. 
 
+data EvilGoateeConst a b =
+  GoatyConst b deriving (Eq, Show)
 
+instance Functor (EvilGoateeConst a) where
+  fmap f (GoatyConst a) = GoatyConst (f a)
 
+instance (Arbitrary b) => Arbitrary (EvilGoateeConst a b) where
+  arbitrary = do
+    a <- arbitrary
+    return (GoatyConst a)
 
+type EvilGoateeConstFC = (EvilGoateeConst Int Int) -> IntToInt -> IntToInt -> Bool
 
+--5. 
+
+data LiftItOut f a =
+  LiftItOut (f a) deriving (Eq, Show)
+
+instance Functor f => Functor (LiftItOut f) where
+  fmap f (LiftItOut fa) = LiftItOut (fmap f fa)
+
+instance (Arbitrary b) => Arbitrary (LiftItOut f b) where
+  arbitrary = do
+    a <- arbitrary
+    return (LiftItOut (Just a))
+
+-- see 16.13 p654
 
 
 
