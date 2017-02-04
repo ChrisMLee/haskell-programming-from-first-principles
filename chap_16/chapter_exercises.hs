@@ -114,12 +114,77 @@ data LiftItOut f a =
 instance Functor f => Functor (LiftItOut f) where
   fmap f (LiftItOut fa) = LiftItOut (fmap f fa)
 
-instance (Arbitrary b) => Arbitrary (LiftItOut f b) where
-  arbitrary = do
-    a <- arbitrary
-    return (LiftItOut (Just a))
+--instance (Arbitrary b) => Arbitrary (LiftItOut f b) where
+--  arbitrary = do
+--    a <- arbitrary
+--    return (LiftItOut (Just a))
 
 -- see 16.13 p654
+
+--6. 
+data Parappa f g a =
+  DaWrappa (f a) (g a)
+
+-- Composition  `fmap (f.g) == fmap f . fmap g`
+
+instance (Functor a, Functor b) => Functor (Parappa a b) where
+  fmap f (DaWrappa (ac) (bc) ) = DaWrappa (fmap f ac)  (fmap f bc)
+
+--7.
+
+data IgnoreOne f g a b =
+  IgnoringSomething (f a) (g b) deriving (Eq, Show)
+
+instance (Functor a, Functor b) => Functor (IgnoreOne a b c) where
+  fmap f (IgnoringSomething (ac) (bd)) = IgnoringSomething ac (fmap f bd)
+
+--8. 
+
+data Notorious g o a t =
+  Notorious (g o) (g a) (g t)
+
+instance (Functor a) => Functor (Notorious a b c) where
+  fmap f (Notorious (ab) (ac) (ad)) = Notorious ab ac (fmap f ad)
+
+--9. 
+data List' a =
+    Nil
+  | Cons' a (List' a)
+
+instance Functor List' where
+  fmap f Nil = Nil
+  fmap f (Cons' a b) = Cons' (f a) (fmap f b)
+
+--10.
+data GoatLord a = 
+    NoGoat
+  | OneGoat a
+  | MoreGoats (GoatLord a) (GoatLord a) (GoatLord a)
+
+instance Functor GoatLord where
+  fmap f NoGoat = NoGoat
+  fmap f (OneGoat a) = OneGoat (f a)
+  fmap f (MoreGoats a b c) = MoreGoats (fmap f a) (fmap f b) (fmap f c) 
+
+--11.
+data TalkToMe a = 
+    Halt
+  | Print String a
+  | Read (String -> a)
+instance Functor TalkToMe where
+  fmap f Halt = Halt
+  fmap f (Print a b) = Print a (f b)
+  fmap f (Read g) = Read (fmap f g)
+
+
+
+
+
+
+
+
+
+
 
 
 

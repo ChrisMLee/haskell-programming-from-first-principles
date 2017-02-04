@@ -32,6 +32,18 @@ d = fmap ((return '1' ++) . show)(\x -> [x, 1..3])
 
 Functor instances for Maybe and Either are handy for times you intend to ignore the left cases, which are typically your error or failure cases. Because fmap doesn’t touch those cases, you can map your function right to the values that you intend to work with and ignore those failure cases.
 
+### Questions
+1. Q: How do you write an arbitrary for (16.17 #5, #6 - last section):  
+
+```
+data LiftItOut f a = LiftItOut (f a)
+
+instance Functor f => Functor (LiftItOut f) where
+  fmap f (LiftItOut fa) = LiftItOut (fmap f fa)
+```
+
+2.
+
 ### 16.4 Exercises: Be Kind
 1. What’s the kind of a?  
 `a -> a`  
@@ -80,3 +92,6 @@ No.
 
 see [rearrange.hs](./rearrange.hs)  
 see [chapter_exercises.hs](./chapter_exercises.hs)
+
+### Unfinished Problems
+16.17 #11
