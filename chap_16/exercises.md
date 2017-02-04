@@ -55,3 +55,28 @@ see [instances_of_func.hs](./instances_of_func.hs)
 
 ### Exercise: Possibly
 see [possibly.hs](./possibly.hs)
+
+### 16.17 Chapter exercises
+Determine if a valid Functor can be written for the datatype provided.
+
+1.  `data Bool =  
+      False | True`  
+No, its of kind `*`.
+
+2. `data BoolAndSomethingElse a =
+False' a | True' a`  
+Yes. kind is `* -> *`
+
+3. `data BoolAndMaybeSomethingElse a =
+Falsish | Truish a`  
+Yes
+
+4. `newtype Mu f = InF { outF :: f (Mu f) }`  
+Yes  
+
+5. `data D =
+D (Array Word Word) Int Int`  
+No.
+
+see [rearrange.hs](./rearrange.hs)  
+see [chapter_exercises.hs](./chapter_exercises.hs)
