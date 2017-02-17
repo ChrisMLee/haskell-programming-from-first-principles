@@ -42,7 +42,20 @@ instance Functor f => Functor (LiftItOut f) where
   fmap f (LiftItOut fa) = LiftItOut (fmap f fa)
 ```
 
-2.
+2. q: 16.17 #11 - Is this correct?
+
+```
+data TalkToMe a =
+    Halt
+  | Print String a
+  | Read (String -> a)
+
+instance Functor TalkToMe where
+  fmap f Halt = Halt
+  fmap f (Print a b) = Print a (f b)
+  fmap f (Read g) = Read (fmap f g)
+```
+
 
 ### 16.4 Exercises: Be Kind
 1. What’s the kind of a?  
@@ -92,6 +105,3 @@ No.
 
 see [rearrange.hs](./rearrange.hs)  
 see [chapter_exercises.hs](./chapter_exercises.hs)
-
-### Unfinished Problems
-16.17 #11
