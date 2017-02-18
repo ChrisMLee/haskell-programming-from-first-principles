@@ -86,3 +86,22 @@ see [validation_applicative.hs](./validation_applicative.hs)
 -- Methods  
 `(pure :: Monoid e => a -> (->) e a) "hello" "world"`
 `(<*>) ::  Monoid e => ((->) e) (a -> b) -> ((->) e) a -> ((->) e) b`
+
+see [chapter_exercises.hs](./chapter_exercises.hs)
+
+### Combinations
+Remember the vowels and stops chapter exercise in folds? Write the function to generate the possible combinations of three input lists using liftA3 from Control.Applicative
+
+---
+
+Given the following sets of consonants and vowels:  
+     stops  = "pbtdkg"  
+     vowels = "aeiou"  
+
+a) Write a function that takes inputs from stops and vowels and makes 3-tuples of all possible stop-vowel-stop combinations. These will not all correspond to real words in English, although the stop-vowel-stop pattern is common enough that many of them will.
+
+b) Modify that function so that it only returns the combina- tions that begin with a p.
+
+c) Now set up lists of nouns and verbs (instead of stops and vowels) and modify the function to make tuples represent- ing possible noun-verb-noun sentences.
+
+see [combinations.hs](./combinations.hs)
