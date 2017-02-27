@@ -1,0 +1,851 @@
+
+==================== FINAL INTERFACE ====================
+2017-02-25 16:47:37.589275 UTC
+
+interface main@main:Main 8002
+  interface hash: 929c63d19579959bc1f31ba19c1ecbc5
+  ABI hash: 4f0579e7920e8b2c7ac71176e5c25bc1
+  export-list hash: 6de16f72e8f99eb8d8827928f1b166cb
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8de2c046623d33e1f3efe5ffb7359372
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.alphaNum
+  Main.app
+  Main.getURI
+  Main.linkShorty
+  Main.main
+  Main.randomElement
+  Main.saveURI
+  Main.shortyAintUri
+  Main.shortyCreated
+  Main.shortyFound
+  Main.shortyGen
+module dependencies:
+package dependencies: aeson-1.0.2.1@aeson-1.0.2.1-1PgNnQdZpa7BG8cq9P3bMU
+                      appar-0.1.4@appar-0.1.4-DGWHHt2WRn9FI49prcwO9
+                      array-0.5.1.1@array-0.5.1.1
+                      async-2.1.1@async-2.1.1-4n6HEMPJR2eJK0JpvCfuPK
+                      attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1
+                      auto-update-0.1.4@auto-update-0.1.4-EmUvNdmhEju51bHrtaEMpz
+                      base-4.9.1.0
+                      base-compat-0.9.1@base-compat-0.9.1-B9geVZFtCvE8ERS7UcvkRz
+                      binary-0.8.3.0@binary-0.8.3.0
+                      blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-CGB8BvrFgghHy5bLy0SFOg
+                      byteorder-1.0.4@byteorder-1.0.4-9NlNHkBVdo7F1prFVKrkcH
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      bytestring-lexing-0.5.0.2@bytestring-lexing-0.5.0.2-6li4dsGccWCHhBeSRzrvae
+                      case-insensitive-1.2.0.8@case-insensitive-1.2.0.8-JH9TmxTHpl01TJ0h86Xqcf
+                      containers-0.5.7.1@containers-0.5.7.1
+                      data-default-class-0.1.2.0@data-default-class-0.1.2.0-GsXqKN6o1X9jr0fF5qCVD
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.3.0.0@directory-1.3.0.0
+                      dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      filepath-1.4.1.1@filepath-1.4.1.1
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.5.0@hashable-1.2.5.0-F4MWeNuv2sjJRqBd2T5ul4
+                      hedis-0.9.7@hedis-0.9.7-65oveZFlW7ZKgvkvWYuED3
+                      http-date-0.0.6.1@http-date-0.0.6.1-I9CE9BHCJzIDsnojCE46i
+                      http-types-0.9.1@http-types-0.9.1-5F2YjZNOfOTCho80klHZFM
+                      http2-1.6.3@http2-1.6.3-AztirFAAzjluWi6d9XlAh integer-gmp-1.0.0.1
+                      integer-logarithms-1.0.1@integer-logarithms-1.0.1-IEHCuEd5sG4JjSjlx7m5JF
+                      iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4
+                      lifted-base-0.2.3.10@lifted-base-0.2.3.10-BoEavBFIcriDza63doCjS2
+                      mmorph-1.0.9@mmorph-1.0.9-5bASEvmIkr5CpdAYXwPsn0
+                      monad-control-1.0.1.0@monad-control-1.0.1.0-LQwQ0Hi5p0oAccTfTzbfD5
+                      mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe
+                      network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF
+                      parsec-3.1.11@parsec-3.1.11-113irVHGgd88sRnywByDNw
+                      primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH
+                      psqueues-0.2.2.3@psqueues-0.2.2.3-GauKnoBPgvr4cpGo1pqheE
+                      random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog
+                      regex-base-0.93.2@regex-base-0.93.2-AYjYAsBidAc8f5XNm9b2Aa
+                      regex-compat-0.95.1@regex-compat-0.95.1-7IGKoiHTSKL3opdpEZ0pO8
+                      regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO
+                      resource-pool-0.2.3.2@resource-pool-0.2.3.2-DBgmZYXlKazI2NEJ1zhRAp
+                      resourcet-1.1.9@resourcet-1.1.9-Ej57FoSD8NQLck5u9CwWz8
+                      scanner-0.2@scanner-0.2-4lcLejGin4EFaBwHS4mjDD
+                      scientific-0.3.4.10@scientific-0.3.4.10-HRQd1hS6vMV6hvjSlMi8B0
+                      scotty-0.11.0@scotty-0.11.0-HoJX6uEUIYfKG8hVquvrQl
+                      simple-sendfile-0.2.25@simple-sendfile-0.2.25-JJ9zm1wZxYIARxlVa3oQgs
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      streaming-commons-0.1.17@streaming-commons-0.1.17-Ec7F62APEFzLqTOvsWpyBa
+                      stringsearch-0.3.6.6@stringsearch-0.3.6.6-2soGORichTR6reHVhDqKip
+                      tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt
+                      template-haskell-2.11.1.0
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+                      time-1.6.0.1@time-1.6.0.1
+                      time-locale-compat-0.1.1.3@time-locale-compat-0.1.1.3-KZ1jqNx8uhlHjmuPPj6V1Y
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-base-0.4.4@transformers-base-0.4.4-GKSs0LKukAL8ymq2naFmrH
+                      unix-2.7.2.1@unix-2.7.2.1
+                      unix-compat-0.4.3.1@unix-compat-0.4.3.1-Ausmw6d7KIwA7sl52mzqxC
+                      unordered-containers-0.2.7.2@unordered-containers-0.2.7.2-8AmrySQXjRGF6VciYs51fM
+                      vault-0.3.0.6@vault-0.3.0.6-LaXzEmUAZNyLZeEpsXBRv2
+                      vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG
+                      wai-3.2.1.1@wai-3.2.1.1-8NcmuA9FbmNFdjqmYFUkuU
+                      wai-extra-3.0.19.1@wai-extra-3.0.19.1-7J2wqhE7e2k5dZ9XFSBfnU
+                      warp-3.2.11@warp-3.2.11-GandlVRcT5FE3AjRzXcBTq
+                      word8-0.1.2@word8-0.1.2-9WDPGCTpW7JJnsiAQavtd1
+orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1:Data.Attoparsec.ByteString.Char8
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1:Data.Attoparsec.Text.Internal
+         base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.5.0@hashable-1.2.5.0-F4MWeNuv2sjJRqBd2T5ul4:Data.Hashable.Generic
+         network-2.6.3.1@network-2.6.3.1-ABFtZSq90Z9BfMXNiqgBoe:Network.Socket
+         regex-base-0.93.2@regex-base-0.93.2-AYjYAsBidAc8f5XNm9b2Aa:Text.Regex.Base.Context
+         regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO:Text.Regex.Posix.ByteString
+         regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO:Text.Regex.Posix.ByteString.Lazy
+         regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO:Text.Regex.Posix.Sequence
+         regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO:Text.Regex.Posix.String
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
+family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-HCAgpBrKCLJ5li8FbfXxE1:Data.Attoparsec.Internal.Types
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         dlist-0.8.0.2@dlist-0.8.0.2-6Wnps4GD7EFnRucVzXIFD:Data.DList
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         hedis-0.9.7@hedis-0.9.7-65oveZFlW7ZKgvkvWYuED3:Database.Redis.Protocol
+                         hedis-0.9.7@hedis-0.9.7-65oveZFlW7ZKgvkvWYuED3:Database.Redis.Transactions
+                         hedis-0.9.7@hedis-0.9.7-65oveZFlW7ZKgvkvWYuED3:Database.Redis.Types
+                         iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4:Data.IP.Addr
+                         iproute-1.7.1@iproute-1.7.1-4HULutk0xITKNjI1pwYrD4:Data.IP.Range
+                         monad-control-1.0.1.0@monad-control-1.0.1.0-LQwQ0Hi5p0oAccTfTzbfD5:Control.Monad.Trans.Control
+                         network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF:Network.URI
+                         primitive-0.6.1.0@primitive-0.6.1.0-6AbSTw9JXz141LE5p6LGH:Control.Monad.Primitive
+                         resourcet-1.1.9@resourcet-1.1.9-Ej57FoSD8NQLck5u9CwWz8:Control.Monad.Trans.Resource.Internal
+                         scotty-0.11.0@scotty-0.11.0-HoJX6uEUIYfKG8hVquvrQl:Web.Scotty.Internal.Types
+                         tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt:Data.Tagged
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+                         unordered-containers-0.2.7.2@unordered-containers-0.2.7.2-8AmrySQXjRGF6VciYs51fM:Data.HashMap.Base
+                         unordered-containers-0.2.7.2@unordered-containers-0.2.7.2-8AmrySQXjRGF6VciYs51fM:Data.HashSet
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Storable
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed
+                         vector-0.11.0.0@vector-0.11.0.0-LMwQhhnXj8U3T5Bm1JFxG:Data.Vector.Unboxed.Base
+import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
+import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
+import  -/  base-4.9.1.0:Data.Either 20b09ef8d0a5b74fdec011c40c1587f5
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Char8 04951c02f7879a7c7ead8468b2cdc233
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Internal 55dd939197544e08d4254aa7d070fa6c
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  hedis-0.9.7@hedis-0.9.7-65oveZFlW7ZKgvkvWYuED3:Database.Redis 57498bae9e946a9d4186dea2ff4eda30
+import  -/  hedis-0.9.7@hedis-0.9.7-65oveZFlW7ZKgvkvWYuED3:Database.Redis.Commands d571e180f8a8b048d50272f94a57bd34
+import  -/  hedis-0.9.7@hedis-0.9.7-65oveZFlW7ZKgvkvWYuED3:Database.Redis.Core c3ddf732252766dbd8b14263f033c7ea
+import  -/  hedis-0.9.7@hedis-0.9.7-65oveZFlW7ZKgvkvWYuED3:Database.Redis.ManualCommands f40bbd0d5113281d2716f7c52b573a75
+import  -/  hedis-0.9.7@hedis-0.9.7-65oveZFlW7ZKgvkvWYuED3:Database.Redis.Protocol 0d20f45322d41a36101226694cb9d80d
+import  -/  hedis-0.9.7@hedis-0.9.7-65oveZFlW7ZKgvkvWYuED3:Database.Redis.Types 1e2e6b1514235037e1638a2ed437cac8
+import  -/  network-uri-2.6.1.0@network-uri-2.6.1.0-EwGrJ9bdUqR1E7dAIJ4cwF:Network.URI 93209ffa1ef6049240d836128997585a
+import  -/  random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog:System.Random cc3ef358c669b194cf9fe94db6f2430f
+import  -/  scotty-0.11.0@scotty-0.11.0-HoJX6uEUIYfKG8hVquvrQl:Web.Scotty c53d2f0f14d158f2491a3c1470a0b9ac
+import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Encoding fe74613430145a30a43716ed0b668cc9
+import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Internal.Lazy 1efb735dc8fcde46f3a3e88605ea2067
+import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy 547b2cb8d74b3b03ee583c506a59422a
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+9458397dea856e96cf3dd844380ed1b6
+  $wgetURI ::
+    GHC.Types.IO Database.Redis.ProtocolPipelining.Connection
+    -> (Database.Redis.ProtocolPipelining.Connection
+        -> GHC.Types.IO ())
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Data.Vector.Vector
+         (Data.Pool.LocalPool Database.Redis.ProtocolPipelining.Connection)
+    -> Data.ByteString.Internal.ByteString
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            Database.Redis.Protocol.Reply
+            (GHC.Base.Maybe Data.ByteString.Internal.ByteString) #)
+  {- Arity: 7,
+     Strictness: <L,U><L,1*C1(U)><L,1*U(1*U)><L,1*U(U)><L,U(U,U,U)><L,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.IO
+                            Database.Redis.ProtocolPipelining.Connection)
+                   (ww1 :: Database.Redis.ProtocolPipelining.Connection
+                           -> GHC.Types.IO ())
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: GHC.Types.Int)
+                   (ww4 :: Data.Vector.Vector
+                             (Data.Pool.LocalPool Database.Redis.ProtocolPipelining.Connection))
+                   (w :: Data.ByteString.Internal.ByteString)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Data.Pool.$w$swithResource
+                   @ Database.Redis.ProtocolPipelining.Connection
+                   @ (Data.Either.Either
+                        Database.Redis.Protocol.Reply
+                        (GHC.Base.Maybe Data.ByteString.Internal.ByteString))
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   (\ (conn :: Database.Redis.ProtocolPipelining.Connection)[OneShot]
+                      (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                    case GHC.Prim.newMutVar#
+                           @ Database.Redis.Protocol.Reply
+                           @ GHC.Prim.RealWorld
+                           Database.Redis.Core.checkedConnect6
+                           eta of ds { (#,#) ipv ipv1 ->
+                    case ((Database.Redis.Core.sendRequest
+                             @ Database.Redis.Core.Redis
+                             @ (Data.Either.Either Database.Redis.Protocol.Reply)
+                             @ (GHC.Base.Maybe Data.ByteString.Internal.ByteString)
+                             Database.Redis.Core.$fRedisCtxRedisEither
+                             Database.Redis.Commands.brpoplpush2
+                               `cast`
+                             (Sym (Database.Redis.Types.N:RedisResult[0]
+                                       <GHC.Base.Maybe Data.ByteString.Internal.ByteString>_N))
+                             (GHC.Types.:
+                                @ Data.ByteString.Internal.ByteString
+                                Database.Redis.Commands.get1
+                                (GHC.Types.:
+                                   @ Data.ByteString.Internal.ByteString
+                                   w
+                                   (GHC.Types.[] @ Data.ByteString.Internal.ByteString))))
+                            `cast`
+                          (Trans
+                               (Database.Redis.Core.N:Redis[0] <Data.Either.Either
+                                                                  Database.Redis.Protocol.Reply
+                                                                  (GHC.Base.Maybe
+                                                                     Data.ByteString.Internal.ByteString)>_N)
+                               (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                    <*>_N
+                                    <Database.Redis.Core.RedisEnv>_R
+                                    <GHC.Types.IO>_R
+                                    <Data.Either.Either
+                                       Database.Redis.Protocol.Reply
+                                       (GHC.Base.Maybe Data.ByteString.Internal.ByteString)>_N))
+                            (Database.Redis.Core.Env
+                               conn
+                               (GHC.STRef.STRef
+                                  @ GHC.Prim.RealWorld
+                                  @ Database.Redis.Protocol.Reply
+                                  ipv1)
+                                 `cast`
+                               (Sym (GHC.IORef.N:IORef[0]) <Database.Redis.Protocol.Reply>_N)))
+                           `cast`
+                         (GHC.Types.N:IO[0]
+                              <Data.Either.Either
+                                 Database.Redis.Protocol.Reply
+                                 (GHC.Base.Maybe Data.ByteString.Internal.ByteString)>_R)
+                           ipv of ds1 { (#,#) ipv2 ipv3 ->
+                    case GHC.Prim.readMutVar#
+                           @ GHC.Prim.RealWorld
+                           @ Database.Redis.Protocol.Reply
+                           ipv1
+                           ipv2 of ds2 { (#,#) ipv4 ipv5 ->
+                    case ipv5 of ds3 { DEFAULT -> (# ipv4, ipv3 #) } } } })
+                     `cast`
+                   (<Database.Redis.ProtocolPipelining.Connection>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Data.Either.Either
+                                     Database.Redis.Protocol.Reply
+                                     (GHC.Base.Maybe Data.ByteString.Internal.ByteString)>_R))
+                   w1) -}
+e5fb7a756ec03ff1c0814a29619f3b1a
+  $wloop ::
+    GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Char] #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0] -}
+815d5180018a37c9d6de63327b1da329
+  $wsaveURI ::
+    GHC.Types.IO Database.Redis.ProtocolPipelining.Connection
+    -> (Database.Redis.ProtocolPipelining.Connection
+        -> GHC.Types.IO ())
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Data.Vector.Vector
+         (Data.Pool.LocalPool Database.Redis.ProtocolPipelining.Connection)
+    -> Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            Database.Redis.Protocol.Reply Database.Redis.Types.Status #)
+  {- Arity: 8,
+     Strictness: <L,U><L,1*C1(U)><L,1*U(1*U)><L,1*U(U)><L,U(U,U,U)><L,U><L,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.IO
+                            Database.Redis.ProtocolPipelining.Connection)
+                   (ww1 :: Database.Redis.ProtocolPipelining.Connection
+                           -> GHC.Types.IO ())
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: GHC.Types.Int)
+                   (ww4 :: Data.Vector.Vector
+                             (Data.Pool.LocalPool Database.Redis.ProtocolPipelining.Connection))
+                   (w :: Data.ByteString.Internal.ByteString)
+                   (w1 :: Data.ByteString.Internal.ByteString)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Data.Pool.$w$swithResource
+                   @ Database.Redis.ProtocolPipelining.Connection
+                   @ (Data.Either.Either
+                        Database.Redis.Protocol.Reply Database.Redis.Types.Status)
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   (\ (conn :: Database.Redis.ProtocolPipelining.Connection)[OneShot]
+                      (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                    case GHC.Prim.newMutVar#
+                           @ Database.Redis.Protocol.Reply
+                           @ GHC.Prim.RealWorld
+                           Database.Redis.Core.checkedConnect6
+                           eta of ds { (#,#) ipv ipv1 ->
+                    case ((Database.Redis.Core.auth_$ssendRequest
+                             (GHC.Types.:
+                                @ Data.ByteString.Internal.ByteString
+                                Database.Redis.ManualCommands.set1
+                                (GHC.Types.:
+                                   @ Data.ByteString.Internal.ByteString
+                                   w
+                                   (GHC.Types.:
+                                      @ Data.ByteString.Internal.ByteString
+                                      w1
+                                      (GHC.Types.[] @ Data.ByteString.Internal.ByteString)))))
+                            `cast`
+                          (Trans
+                               (Database.Redis.Core.N:Redis[0] <Data.Either.Either
+                                                                  Database.Redis.Protocol.Reply
+                                                                  Database.Redis.Types.Status>_N)
+                               (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                    <*>_N
+                                    <Database.Redis.Core.RedisEnv>_R
+                                    <GHC.Types.IO>_R
+                                    <Data.Either.Either
+                                       Database.Redis.Protocol.Reply
+                                       Database.Redis.Types.Status>_N))
+                            (Database.Redis.Core.Env
+                               conn
+                               (GHC.STRef.STRef
+                                  @ GHC.Prim.RealWorld
+                                  @ Database.Redis.Protocol.Reply
+                                  ipv1)
+                                 `cast`
+                               (Sym (GHC.IORef.N:IORef[0]) <Database.Redis.Protocol.Reply>_N)))
+                           `cast`
+                         (GHC.Types.N:IO[0]
+                              <Data.Either.Either
+                                 Database.Redis.Protocol.Reply Database.Redis.Types.Status>_R)
+                           ipv of ds1 { (#,#) ipv2 ipv3 ->
+                    case GHC.Prim.readMutVar#
+                           @ GHC.Prim.RealWorld
+                           @ Database.Redis.Protocol.Reply
+                           ipv1
+                           ipv2 of ds2 { (#,#) ipv4 ipv5 ->
+                    case ipv5 of ds3 { DEFAULT -> (# ipv4, ipv3 #) } } } })
+                     `cast`
+                   (<Database.Redis.ProtocolPipelining.Connection>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Data.Either.Either
+                                     Database.Redis.Protocol.Reply Database.Redis.Types.Status>_R))
+                   w2) -}
+01285368f662c521ebe5bdf5282f41a7
+  alphaNum :: GHC.Base.String
+  {- Unfolding: (Main.alphaNum_go 65#) -}
+c7dd3c3cf6688810b348f9ec15f17cf1
+  alphaNum_go :: GHC.Prim.Int# -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,U> -}
+ae24d5d40c247027f5f31a5ad270605e
+  app :: Database.Redis.Core.Connection -> Web.Scotty.ScottyM ()
+  {- Arity: 1, Strictness: <L,U(U,C(U),U(U),A,U(U),U(U,U,U),A)> -}
+ddaf1db6587266317743eab9edff5d63
+  getURI ::
+    Database.Redis.Core.Connection
+    -> Data.ByteString.Internal.ByteString
+    -> GHC.Types.IO
+         (Data.Either.Either
+            Database.Redis.Protocol.Reply
+            (GHC.Base.Maybe Data.ByteString.Internal.ByteString))
+  {- Arity: 3,
+     Strictness: <S,1*U(U,1*C1(U),1*U(1*U),A,1*U(U),U(U,U,U),A)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.getURI1
+                  `cast`
+                (<Database.Redis.Core.Connection>_R
+                 ->_R <Data.ByteString.Internal.ByteString>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.Either.Either
+                                  Database.Redis.Protocol.Reply
+                                  (GHC.Base.Maybe Data.ByteString.Internal.ByteString)>_R)) -}
+0ca3f8df2944c7e505829ebee360483d
+  getURI1 ::
+    Database.Redis.Core.Connection
+    -> Data.ByteString.Internal.ByteString
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            Database.Redis.Protocol.Reply
+            (GHC.Base.Maybe Data.ByteString.Internal.ByteString) #)
+  {- Arity: 3,
+     Strictness: <S,1*U(U,1*C1(U),1*U(1*U),A,1*U(U),U(U,U,U),A)><L,U><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Database.Redis.Core.Connection)
+                   (w1 :: Data.ByteString.Internal.ByteString)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w `cast`
+                      (Database.Redis.Core.N:Connection[0]) of ww { Data.Pool.Pool ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 Main.$wgetURI ww1 ww2 ww3 ww5 ww6 w1 w2 }) -}
+040a1e3167a36b482f193123a06bb73d
+  linkShorty :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (shorty :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n1 :: b)[OneShot] ->
+                    GHC.Base.foldr @ GHC.Types.Char @ b c n1 Main.linkShorty2)
+                   (GHC.Base.augment
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n1 :: b)[OneShot] ->
+                       GHC.Base.foldr @ GHC.Types.Char @ b c n1 shorty)
+                      Main.linkShorty1)) -}
+3bbf09d38b7604c353ff89e07d493c2f
+  linkShorty1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "\">Copy and paste your short URL</a>"#) -}
+5169bfc50c8da5ec5c35526b513edb87
+  linkShorty2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "<a href=\""#) -}
+5fe694eb454b99f7a7d83dae1df31a0a
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+734c36b631a82e8839f7a1f2e98edc82
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Database.Redis.Core.$wconnect
+                        Database.Redis.Core.defaultConnectInfo5
+                        Database.Redis.Core.defaultConnectInfo3
+                        (GHC.Base.Nothing @ Data.ByteString.Internal.ByteString)
+                        Database.Redis.Core.checkedConnect9
+                        50#
+                        Database.Redis.Core.defaultConnectInfo1
+                          `cast`
+                        (Trans
+                             (Sym (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P))
+                             (Sym (Data.Time.Clock.UTC.N:NominalDiffTime[0])))
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 (Web.Scotty.Trans.scottyOptsT
+                    @ GHC.Types.IO
+                    @ GHC.Types.IO
+                    @ Data.Text.Internal.Lazy.Text
+                    GHC.Base.$fMonadIO
+                    Control.Monad.IO.Class.$fMonadIOIO
+                    Main.main2
+                    (GHC.Base.id @ (GHC.Types.IO Network.Wai.Internal.Response))
+                    (Main.app ipv1))
+                   `cast`
+                 (GHC.Types.N:IO[0] <()>_R)
+                   ipv }) -}
+9a167953d36357f53e47d4a19b0a1b58
+  main2 :: Web.Scotty.Internal.Types.Options
+  {- Unfolding: (Web.Scotty.Internal.Types.Options
+                   Web.Scotty.Internal.Types.$fDefaultOptions3
+                   Main.main3) -}
+cdfbb0484e80391cbee62bb00899f899
+  main3 :: Network.Wai.Handler.Warp.Settings.Settings
+  {- Unfolding: (Network.Wai.Handler.Warp.Settings.Settings
+                   Main.main4
+                   Network.Wai.Handler.Warp.Settings.defaultSettings16
+                   Network.Wai.Handler.Warp.Settings.defaultOnException1
+                     `cast`
+                   (<GHC.Base.Maybe Network.Wai.Internal.Request>_R
+                    ->_R <GHC.Exception.SomeException>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultOnExceptionResponse
+                   Network.Wai.Handler.Warp.Settings.defaultSettings14
+                     `cast`
+                   (<Network.Socket.Types.SockAddr>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings13
+                     `cast`
+                   (<Network.Socket.Types.SockAddr>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings12
+                   (GHC.Base.Nothing @ Network.Wai.Handler.Warp.Timeout.Manager)
+                   Web.Scotty.Internal.Types.$fDefaultOptions2
+                   Network.Wai.Handler.Warp.Settings.defaultSettings11
+                   Network.Wai.Handler.Warp.Settings.defaultSettings9
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings10
+                     `cast`
+                   (<(forall a. GHC.Types.IO a -> GHC.Types.IO a)
+                     -> GHC.Types.IO ()>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   GHC.Types.False
+                   Network.Wai.Handler.Warp.Settings.defaultSettings8
+                     `cast`
+                   (<GHC.Types.IO ()>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings6
+                   Network.Wai.Handler.Warp.Settings.defaultSettings4
+                   Network.Wai.Handler.Warp.Settings.ProxyProtocolNone
+                   Network.Wai.Handler.Warp.Settings.defaultSettings3
+                   GHC.Types.True
+                   Network.Wai.Handler.Warp.Settings.defaultSettings2
+                     `cast`
+                   (<Network.Wai.Internal.Request>_R
+                    ->_R <Network.HTTP.Types.Status.Status>_R
+                    ->_R <GHC.Base.Maybe GHC.Integer.Type.Integer>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings1
+                     `cast`
+                   (<Network.Wai.Internal.Request>_R
+                    ->_R <Data.ByteString.Internal.ByteString>_R
+                    ->_R <GHC.Integer.Type.Integer>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   (GHC.Base.Nothing @ GHC.Types.Int)) -}
+0eb618818c699b2d070d401ddbe588fb
+  main4 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 3000#) -}
+7ab25853af8c7f4fe876b65a4840e529
+  main5 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+b9dd68ac6658982d0014c71a0edca5b6
+  randomElement :: GHC.Base.String -> GHC.Types.IO GHC.Types.Char
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.randomElement1
+                  `cast`
+                (<GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Char>_R)) -}
+bbf9b8946310522fa46d2b535d2bb532
+  randomElement1 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Char #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (xs :: GHC.Base.String)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case System.Random.$fRandomInt3
+                        (Main.randomElement2,
+                         case GHC.List.$wlenAcc @ GHC.Types.Char xs 0# of ww2 { DEFAULT ->
+                         GHC.Types.I# (GHC.Prim.-# ww2 1#) })
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 (# ipv, GHC.List.!! @ GHC.Types.Char xs ipv1 #) }) -}
+573f49dfa963ccaa0d9a2d79a64affca
+  randomElement2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+537d2f6c198c8823c961676815b34b85
+  saveURI ::
+    Database.Redis.Core.Connection
+    -> Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+    -> GHC.Types.IO
+         (Data.Either.Either
+            Database.Redis.Protocol.Reply Database.Redis.Types.Status)
+  {- Arity: 4,
+     Strictness: <S,1*U(U,1*C1(U),1*U(1*U),A,1*U(U),U(U,U,U),A)><L,U><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.saveURI1
+                  `cast`
+                (<Database.Redis.Core.Connection>_R
+                 ->_R <Data.ByteString.Internal.ByteString>_R
+                 ->_R <Data.ByteString.Internal.ByteString>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.Either.Either
+                                  Database.Redis.Protocol.Reply Database.Redis.Types.Status>_R)) -}
+ed66d2f935f0a43473b19eb6f71ff53d
+  saveURI1 ::
+    Database.Redis.Core.Connection
+    -> Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            Database.Redis.Protocol.Reply Database.Redis.Types.Status #)
+  {- Arity: 4,
+     Strictness: <S,1*U(U,1*C1(U),1*U(1*U),A,1*U(U),U(U,U,U),A)><L,U><L,U><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: Database.Redis.Core.Connection)
+                   (w1 :: Data.ByteString.Internal.ByteString)
+                   (w2 :: Data.ByteString.Internal.ByteString)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w `cast`
+                      (Database.Redis.Core.N:Connection[0]) of ww { Data.Pool.Pool ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 Main.$wsaveURI ww1 ww2 ww3 ww5 ww6 w1 w2 w3 }) -}
+1bbf19386cd1977d5daf019ed01aa347
+  shortyAintUri ::
+    Data.Text.Internal.Lazy.Text -> Data.Text.Internal.Lazy.Text
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (uri :: Data.Text.Internal.Lazy.Text) ->
+                 Main.shortyAintUri_go31 uri Main.shortyAintUri1) -}
+a04497fc296cf6fc5f20bff2df676481
+  shortyAintUri1 :: [Data.Text.Internal.Lazy.Text]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Text.Internal.Lazy.Text
+                   Main.shortyAintUri2
+                   (GHC.Types.[] @ Data.Text.Internal.Lazy.Text)) -}
+ab6e52fcc03f5c8522b2b8a145b98d9b
+  shortyAintUri2 :: Data.Text.Internal.Lazy.Text
+  {- Unfolding: (Data.Text.Lazy.unpackCString#
+                   " wasn't a URL, did you forget http://?"#) -}
+85ab07ce652f378c7245753b6d7c993a
+  shortyAintUri_go31 ::
+    Data.Text.Internal.Lazy.Text
+    -> [Data.Text.Internal.Lazy.Text] -> Data.Text.Internal.Lazy.Text
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
+37bd461cd131a5d1d36e25cbd1433133
+  shortyCreated ::
+    GHC.Show.Show a =>
+    a -> GHC.Base.String -> Data.Text.Internal.Lazy.Text
+  {- Arity: 3, Strictness: <S(LC(S)L),1*U(A,1*C1(U),A)><L,U><L,1*U>,
+     Unfolding: (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (resp :: a)
+                   (shawty :: GHC.Base.String) ->
+                 case GHC.Base.map
+                        @ GHC.Types.Char
+                        @ GHC.Types.Char
+                        Data.Text.Internal.safe
+                        (GHC.Show.show @ a $dShow resp) of dt { DEFAULT ->
+                 Main.shortyCreated_go1
+                   (Main.shortyCreated_outer4 dt)
+                   (GHC.Types.:
+                      @ Data.Text.Internal.Lazy.Text
+                      Main.shortyCreated1
+                      (GHC.Types.:
+                         @ Data.Text.Internal.Lazy.Text
+                         (case GHC.Base.map
+                                 @ GHC.Types.Char
+                                 @ GHC.Types.Char
+                                 Data.Text.Internal.safe
+                                 (GHC.Base.++
+                                    @ GHC.Types.Char
+                                    Main.linkShorty2
+                                    (GHC.Base.++
+                                       @ GHC.Types.Char
+                                       shawty
+                                       Main.linkShorty1)) of dt1 { DEFAULT ->
+                          Main.shortyCreated_outer3 dt1 })
+                         (GHC.Types.[] @ Data.Text.Internal.Lazy.Text))) }) -}
+53cfc27f6e96a2bced4cf9b584d31c79
+  shortyCreated1 :: Data.Text.Internal.Lazy.Text
+  {- Unfolding: (Data.Text.Lazy.unpackCString# " shorty is: "#) -}
+3939639cbb5e7c1ffc417adbfae0201d
+  shortyCreated_$sshortyCreated ::
+    Data.Either.Either
+      Database.Redis.Protocol.Reply Database.Redis.Types.Status
+    -> GHC.Base.String -> Data.Text.Internal.Lazy.Text
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: (\ (resp :: Data.Either.Either
+                              Database.Redis.Protocol.Reply Database.Redis.Types.Status)
+                   (shawty :: GHC.Base.String) ->
+                 let {
+                   karg :: Data.Text.Internal.Lazy.Text
+                   = case GHC.Base.map
+                            @ GHC.Types.Char
+                            @ GHC.Types.Char
+                            Data.Text.Internal.safe
+                            (GHC.Base.++
+                               @ GHC.Types.Char
+                               Main.linkShorty2
+                               (GHC.Base.++
+                                  @ GHC.Types.Char
+                                  shawty
+                                  Main.linkShorty1)) of dt { DEFAULT ->
+                     Main.shortyCreated_outer2 dt }
+                 } in
+                 case resp of wild {
+                   Data.Either.Left b1
+                   -> case GHC.Base.map
+                             @ GHC.Types.Char
+                             @ GHC.Types.Char
+                             Data.Text.Internal.safe
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Data.Either.$fShowEither3
+                                (Database.Redis.Protocol.$w$cshowsPrec
+                                   11#
+                                   b1
+                                   (GHC.Types.[] @ GHC.Types.Char))) of dt { DEFAULT ->
+                      Main.shortyCreated_go31
+                        (Main.shortyCreated_outer1 dt)
+                        (GHC.Types.:
+                           @ Data.Text.Internal.Lazy.Text
+                           Main.shortyCreated1
+                           (GHC.Types.:
+                              @ Data.Text.Internal.Lazy.Text
+                              karg
+                              (GHC.Types.[] @ Data.Text.Internal.Lazy.Text))) }
+                   Data.Either.Right b1
+                   -> case GHC.Base.map
+                             @ GHC.Types.Char
+                             @ GHC.Types.Char
+                             Data.Text.Internal.safe
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Data.Either.$fShowEither2
+                                (Database.Redis.Types.$fShowStatus_$cshowsPrec
+                                   Data.Either.$fShowEither4
+                                   b1
+                                   (GHC.Types.[] @ GHC.Types.Char))) of dt { DEFAULT ->
+                      Main.shortyCreated_go31
+                        (Main.shortyCreated_outer dt)
+                        (GHC.Types.:
+                           @ Data.Text.Internal.Lazy.Text
+                           Main.shortyCreated1
+                           (GHC.Types.:
+                              @ Data.Text.Internal.Lazy.Text
+                              karg
+                              (GHC.Types.[] @ Data.Text.Internal.Lazy.Text))) } }) -}
+cbcc33c1485b0091517e9a2e6663e2e7
+  shortyCreated_go1 ::
+    Data.Text.Internal.Lazy.Text
+    -> [Data.Text.Internal.Lazy.Text] -> Data.Text.Internal.Lazy.Text
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
+c935dbe2c1161539db73d2716c43d2a6
+  shortyCreated_go31 ::
+    Data.Text.Internal.Lazy.Text
+    -> [Data.Text.Internal.Lazy.Text] -> Data.Text.Internal.Lazy.Text
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
+16cd963a86be12fc5144b2f9bb7c2651
+  shortyCreated_outer ::
+    [GHC.Types.Char] -> Data.Text.Internal.Lazy.Text
+  {- Arity: 1, Strictness: <S,1*U> -}
+d6d90f95e41c5f7a90067ae55209c239
+  shortyCreated_outer1 ::
+    [GHC.Types.Char] -> Data.Text.Internal.Lazy.Text
+  {- Arity: 1, Strictness: <S,1*U> -}
+27e625722f14c3308dc2da7a87b48b46
+  shortyCreated_outer2 ::
+    [GHC.Types.Char] -> Data.Text.Internal.Lazy.Text
+  {- Arity: 1, Strictness: <S,1*U> -}
+6810b9a0333c88a9e1ef48ea99694389
+  shortyCreated_outer3 ::
+    [GHC.Types.Char] -> Data.Text.Internal.Lazy.Text
+  {- Arity: 1, Strictness: <S,1*U> -}
+6de4bda1c27246e394f00e23b83510ea
+  shortyCreated_outer4 ::
+    [GHC.Types.Char] -> Data.Text.Internal.Lazy.Text
+  {- Arity: 1, Strictness: <S,1*U> -}
+1f2e1462d9f141471081b01ec92020e6
+  shortyFound ::
+    Data.Text.Internal.Lazy.Text -> Data.Text.Internal.Lazy.Text
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (tbs :: Data.Text.Internal.Lazy.Text) ->
+                 Main.shortyFound_go31
+                   Main.shortyFound4
+                   (GHC.Types.:
+                      @ Data.Text.Internal.Lazy.Text
+                      tbs
+                      (GHC.Types.:
+                         @ Data.Text.Internal.Lazy.Text
+                         Main.shortyFound3
+                         (GHC.Types.:
+                            @ Data.Text.Internal.Lazy.Text
+                            tbs
+                            Main.shortyFound1)))) -}
+5ffffe7aba134c85a8e79ad10c60ca2c
+  shortyFound1 :: [Data.Text.Internal.Lazy.Text]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Text.Internal.Lazy.Text
+                   Main.shortyFound2
+                   (GHC.Types.[] @ Data.Text.Internal.Lazy.Text)) -}
+867a8db6607e8b1a46864aa55ab5b7ac
+  shortyFound2 :: Data.Text.Internal.Lazy.Text
+  {- Unfolding: (Data.Text.Lazy.unpackCString# "</a>"#) -}
+8da926651837bece56626eca93e05d8a
+  shortyFound3 :: Data.Text.Internal.Lazy.Text
+  {- Unfolding: (Data.Text.Lazy.unpackCString# "\">"#) -}
+95e71f3a66e7d38efdf92ed4497df62a
+  shortyFound4 :: Data.Text.Internal.Lazy.Text
+  {- Unfolding: (Data.Text.Lazy.unpackCString# "<a href\""#) -}
+7736f56598d02b9868afdb5d92b00281
+  shortyFound_go31 ::
+    Data.Text.Internal.Lazy.Text
+    -> [Data.Text.Internal.Lazy.Text] -> Data.Text.Internal.Lazy.Text
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
+b39002903af4551dec31e3b564cec214
+  shortyGen :: GHC.Types.IO [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.shortyGen1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <[GHC.Types.Char]>_R)) -}
+daf8be5e1ba6953e77bbc87a1fdb1a2e
+  shortyGen1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Char] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wloop 7# w2) -}
+"SPEC shortyCreated @ (Either Reply Status)" [ALWAYS] forall ($dShow :: GHC.Show.Show
+                                                                          (Data.Either.Either
+                                                                             Database.Redis.Protocol.Reply
+                                                                             Database.Redis.Types.Status))
+  Main.shortyCreated @ (Data.Either.Either
+                          Database.Redis.Protocol.Reply Database.Redis.Types.Status)
+                     $dShow
+  = Main.shortyCreated_$sshortyCreated
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

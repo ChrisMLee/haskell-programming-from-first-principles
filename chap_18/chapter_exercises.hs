@@ -174,6 +174,12 @@ meh (x:xs) f =  (:) <$> f x <*> (meh xs f)
 -- meh = forM 
 
 --6. 
+flipType :: (Monad m) => [m a] -> m [a]
+flipType = flip meh id 
+
+
+
+
 
 
 
