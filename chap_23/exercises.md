@@ -8,4 +8,7 @@ but don't otherwise have specfic operational constraints
 see [roll_your_own.hs](./roll_your_own.hs)
 
 ### Exercises: Write State For Yourself
-see [write_state_for_yourself.hs](./write_state_for_yourself.hs)
+see [write_state_for_yourself.hs](./write_state_for_yourself.hs
+
+### Exercises: Fizzbuzz Differently
+see [fizzbuzz_differently.hs](./fizzbuzz_differently.hs)

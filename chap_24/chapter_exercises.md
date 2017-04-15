@@ -17,5 +17,8 @@ pure :: Applicative f => a -> f a
 (eof >>) . pure :: (Parsing m, Monad m) => b -> m b
 `oneTwo = char '1' >> char '2' >>= (eof >>) . pure`
 
+### Exercise: Unit of Success  
+see [unit_of_success.hs](./unit_of_success.hs
+
 Reference:
 [https://crypto.stanford.edu/~blynn/haskell/parse.html](https://crypto.stanford.edu/~blynn/haskell/parse.html)
