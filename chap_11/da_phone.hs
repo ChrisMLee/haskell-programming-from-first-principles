@@ -3,6 +3,7 @@ module DaPhone where
 import Data.List
 import Data.Char
 import Data.Maybe
+import Data.Monoid
 
 data DaPhone = DaPhone [Key] deriving (Show) 
   
@@ -13,7 +14,6 @@ type Values' = String
 
 -- getKey :: DaPhone -> Key
 -- getKey phone = 
-
 phone :: DaPhone 
 phone = DaPhone [   (Key {symbol'='1', values'=""})
                   , (Key {symbol'='2', values'="ABC"})
@@ -29,13 +29,15 @@ phone = DaPhone [   (Key {symbol'='1', values'=""})
                   , (Key {symbol'='#', values'=".,"})
                 ]
 
+--2.
+
 phoneKeys :: DaPhone -> [Key]
 phoneKeys (DaPhone keys) = keys
 -- getKey :: DaPhone -> Char -> Key
 -- getKey phone 
 
 findBySymbol :: DaPhone -> Char -> Maybe Key
-findBySymbol p s = foldr (\x b -> if (symbol' x) == s then (Just x) else b) Nothing (phoneKeys p)
+findBySymbol p c = foldr (\x b -> if (symbol' x) == c then (Just x) else b) Nothing (phoneKeys p)
 
 findByChar :: DaPhone -> Char -> Maybe Key
 findByChar p c = foldr (\x b -> if (elem (toLower c) $ map toLower $ values' x) then (Just x) else b) Nothing (phoneKeys p)
@@ -58,7 +60,7 @@ type Presses = Int
 
 getPresses :: DaPhone -> Key -> Char -> Presses
 getPresses p k c = getPresses (findBySymbol p c) where
-                      getPresses (Just x) = 0
+                      getPresses (Just x) = (length $ values' k) + 1
                       getPresses Nothing  = (+) 1 $ fromJust $ elemIndex (toLower c) (map toLower $ values' k)
 
 reverseTaps :: DaPhone -> Char -> [(Digit, Presses)]
@@ -87,12 +89,38 @@ convo =
     "Lol ya",
     "Haha thanks just making sure rofl ur turn"]
 
+convertToKeypresses :: DaPhone -> String -> [[(Digit, Presses)]]
+convertToKeypresses p s = map (\x -> if x == ' ' then reverseTaps p '0' else reverseTaps p x) s
 
--- "ABC2"
+tapsToChar :: DaPhone -> [(Digit, Presses)] -> Char
+tapsToChar p (x:xs) =  modifier char where
+                            operatingSet = if x == ('*', 1) then head xs else x
+                            key = fromJust $ findBySymbol p (fst operatingSet)
+                            char
+                              | snd operatingSet > (length $ values' key) && mod (snd operatingSet) (length $ values' key) == 1 = symbol' key
+                              | snd operatingSet <= (length $ values' key) = values' key !! ((snd operatingSet) - 1)
+                            modifier = if x == ('*', 1) then toUpper else toLower
+
+convertToPhrase :: DaPhone -> [[(Digit, Presses)]] -> String 
+convertToPhrase p xs = map (\x -> tapsToChar p x) xs 
+
+--3. 
+fingerTaps :: [(Digit, Presses)] -> Presses 
+fingerTaps xs = foldr (\x b -> snd x + b) 0 xs
+
+--4.
+mostPopularLetter :: DaPhone -> String -> Char
+mostPopularLetter p s = tapsToChar phone (head $ foldr (\x b -> if length x > length b then x else b) [] (group . sort $ convertToKeypresses p s))
+
+--5. 
+
+coolestLtr :: DaPhone -> [String] -> Char
+coolestLtr p xs = tapsToChar p $ head $ foldr (\x b -> if length x > length b then x else b) [] $ group . sort $ xs >>= convertToKeypresses p
+
+-- coolestWord :: [String] -> String
+-- coolestWord = 
 
 
 
 
--- type Action = { type: "REQUEST" } 
---             | { type: "SUCCESS", data: string } 
---             | { type: "FAILURE", error: any }
+
