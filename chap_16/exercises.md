@@ -2,6 +2,8 @@
 
 Functor is a way of lifting over structure (mapping) in such a manner that you don’t have to care about the structure because you’re not allowed to touch the structure anyway.  
 
+A Functor is a way to apply a function over or around some structure that we don't want to alter.
+
 The point of Functor is to reify and be able to talk about cases where we want to reuse functions in the presence of more structure and be transparently oblivious to that additional structure.
 
 Functors obey two basic laws:  

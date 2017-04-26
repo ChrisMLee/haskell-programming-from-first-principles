@@ -29,10 +29,10 @@ virtuousFraction = do
 
 main :: IO ()
 main = do
-  print $ parseString parseFraction mempty badFraction
   print $ parseString parseFraction mempty shouldWork
   print $ parseString parseFraction mempty shouldAlsoWork
   print $ parseString parseFraction mempty alsoBad
+  print $ parseString parseFraction mempty badFraction
 
 testVirtuous :: IO ()
 testVirtuous = do
