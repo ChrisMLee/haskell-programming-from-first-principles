@@ -21,6 +21,12 @@ type Metadata = [NumberOrString]
 data SemVer = 
   SemVer Major Minor Patch Release Metadata deriving (Show)
 
+instance Eq SemVer where
+    (SemVer maj min patch rel meta) == (SemVer maj' min' patch' rel' meta') = maj == maj' && min == min' && patch == patch'
+
+instance Ord SemVer where
+  (SemVer maj min patch _ _) <= (SemVer maj' min' patch' _ _) =  maj <= maj' && min <= min' && patch <= patch'
+
 parseNumOrString :: Parser NumberOrString
 parseNumOrString = 
   try (NOSI <$> integer) <|> (NOSS <$> some letter)
