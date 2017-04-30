@@ -4,6 +4,14 @@ A parser is a function that takes some textual input (it could be a String in Ha
 
 Combinators are expressions with no free variables  
 
+Traditionally, parsing has been done in two stages, lexing and parsing. Characters from a stream will be fed into a lexer,
+which will then emit tokens on demand to the parser until it has no more to emit. The parser then structures the stream of tokens into a tree, commonly known as an "abstract syntax tree" or AST
+```
+lexer :: Stream Char -> Stream Token
+parser :: Stream Token -> AST
+```
+
+
 ### Exercises: Parsing Practice
 1. There’s a combinator that’ll let us mark that we expect an input stream to be “finished” at a particular point in our parser. In the parsers library this is simply called eof (end-of-file) and is in the Text.Parser.Combinators module. See if you can make the one and oneTwo parsers fail because they didn’t exhaust the input stream!  
 
@@ -19,6 +27,12 @@ pure :: Applicative f => a -> f a
 
 ### Exercise: Unit of Success  
 see [unit_of_success.hs](./unit_of_success.hs
+
+# Chapter Exercises:  
+
+### 1. 
+see [semver.hs](./semver.hs)
+
 
 Reference:
 [https://crypto.stanford.edu/~blynn/haskell/parse.html](https://crypto.stanford.edu/~blynn/haskell/parse.html)

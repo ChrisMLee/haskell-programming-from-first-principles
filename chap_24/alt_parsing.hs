@@ -27,8 +27,8 @@ abc
 456
 def|]
 
-main = do
-  print $ parseString parseNos mempty eitherOr
+-- main = do
+--   print $ parseString parseNos mempty eitherOr
 
 -- main = do
 --   print $ parseString (some letter) mempty a
