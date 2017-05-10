@@ -1,3 +1,5 @@
+-- Chapter Exercises: # 1
+
 module Semver where
 
 import Control.Applicative

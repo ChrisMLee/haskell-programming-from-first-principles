@@ -33,6 +33,11 @@ see [unit_of_success.hs](./unit_of_success.hs
 ### 1. 
 see [semver.hs](./semver.hs)
 
+### 2. 
+see [positive_integer_parser.hs](./positive_integer_parser.hs)
+
+### 3. 
+see [positive_integer_parser.hs](./positive_integer_parser.hs)
 
 Reference:
 [https://crypto.stanford.edu/~blynn/haskell/parse.html](https://crypto.stanford.edu/~blynn/haskell/parse.html)
