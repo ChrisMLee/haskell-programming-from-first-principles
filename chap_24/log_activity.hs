@@ -39,6 +39,15 @@ data Line =
   | LineActivity (Activity String)
   deriving (Eq, Show)
 
+(<$$>) :: (Functor f, Functor g) => (a -> b) -> f (g a) -> f (g b)
+(<$$>) = (fmap . fmap)
+
+-- convert this to a Show (Activity String) instance?
+printActivity :: (Activity String) -> String
+printActivity (Activity h m t) = printActivity h m t where
+                                  printActivity (Hours x) (Minutes y) (Title z) =
+                                    z <> " - " <> x <> ":" <> y
+
 base10Conv :: [Int] -> Int
 base10Conv = foldl' (\b a -> a + (b * 10)) 0
 
@@ -77,48 +86,43 @@ parseLogFile = do
   lines <- some parseLine
   return lines
 
--- Activity (Hours "08") (Minutes "00") (Title "Breakfast"),Activity (Hours "09") (Minutes "00") (Title "Sanitizing moisture collector")
--- calculateActivityTime :: (Activity String) -> (Activity String) -> String
-ja = (Activity (Hours "08") (Minutes "00") (Title "Breakfast"))
-rule = (Activity (Hours "12") (Minutes "00") (Title "Lunch"))
+-- via http://stackoverflow.com/questions/376968/convert-haskell-int-with-leading-zero-to-string/376982#376982
+show2d :: Int -> String 
+show2d n | length (show n) == 1 = "0" ++ (show n)
+         | otherwise = show n
 
-
-calculateActivityTime (Activity h m t) (Activity h' m' t') = 
-  whoo h m h' m' where
-    whoo (Hours x) (Minutes y) (Hours x') (Minutes y') =
-      ( (abs $ floor (diffUTCTime (understandTime (x <> ":" <> y)) (understandTime (x' <> ":" <> y')))  `div` 60 `div` 60),
-       floor (diffUTCTime (understandTime (x <> ":" <> y)) (understandTime (x' <> ":" <> y')))  `div` 60 `rem` 60)
-
---- 
-
+-- via http://stackoverflow.com/a/39818693
 timeFormat :: String
 timeFormat = "%H:%M"
 understandTime = parseTimeOrError True defaultTimeLocale timeFormat
 
-timeUno :: UTCTime
-timeUno = understandTime "10:30"
+-- via http://stackoverflow.com/questions/31087004/print-nominaldifftime-as-hours-minutes-and-seconds
+calculateActivityTime :: (Activity String) -> (Activity String) -> (Activity String)
+calculateActivityTime (Activity h m t) (Activity h' m' t') = 
+  activityWithDuration h m h' m' t where
+    activityWithDuration (Hours x) (Minutes y) (Hours x') (Minutes y') (Title z) =
+      Activity (Hours h'') (Minutes m'') (Title z) where
+        diff = diffUTCTime (understandTime (x <> ":" <> y)) (understandTime (x' <> ":" <> y'))
+        h'' = show2d $ abs $ floor (diff)  `div` 60 `div` 60
+        m'' = show2d $ abs $ floor (diff)  `div` 60 `rem` 60
 
-timeDos :: UTCTime
-timeDos = understandTime "12:37"
-
--- noice :: (Activity String) -> String
-noice (Activity x y z) = doope x where
-                          doope (Hours x') = x'
-
--- calculateActivityTimes :: [Line] -> [String]
+calculateActivityTimes :: [Line] -> [(Activity String)]
 calculateActivityTimes list = foldr timeTillNext [] list where
-                                timeTillNext (LineActivity x) b = x : b
+                                timeTillNext (LineActivity x) b = 
+                                  (calculateActivityTime x (next index)) : b where
+                                    index         = elemIndex (LineActivity x) list
+                                    midnight      = Activity (Hours "24") (Minutes "00") (Title "None")
+                                    next (Just z) = if (length list - 1) == z then midnight else inner $ list !! (z + 1) where
+                                                      inner (LineActivity y) = y
+                                    next Nothing  = midnight
                                 timeTillNext (LineComment x) b  = b
                                 timeTillNext (LineDate x) b     = b
-
 -- diffUTCTime
 -- DiffTime
 -- floor (diffUTCTime timeDos timeUno)
 -- floor (diffUTCTime timeDos timeUno) `div` 60 `rem` 60
 -- weirdThing = foldr cool [] [1,2,3] 
 --               where cool a b = (a + 1) : b
-
--- elemIndex 
 
 sectionOne :: String
 sectionOne = [r|
@@ -193,9 +197,8 @@ main = do
   -- print $ parseString parseActivity mempty "09:00 Sanitizing moisture collector"
   -- print $ parseString (some parseLine) mempty sectionOne 
   print $ parseString parseLogFile mempty logFile
-  -- print $ parseString parseComment mempty "-- wheee a comment\n"
-  -- print $ parseString parseDate mempty "# 2025-02-05\n"
-  -- print $ parseString parseLine mempty "08:00 Breakfast\n"
+  print $ printActivity <$$>  (calculateActivityTimes <$> (parseString parseLogFile mempty logFile))
+  -- print $ parseString parseLogFile
 
 -- reduce
 -- LineActivity x
